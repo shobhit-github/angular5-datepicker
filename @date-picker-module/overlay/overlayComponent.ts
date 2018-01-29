@@ -1,19 +1,19 @@
-import { Component, ComponentFactoryResolver, ComponentRef, ElementRef, OnInit, Type, ViewChild, ViewContainerRef } from "@angular/core";
+import { Component, ComponentFactoryResolver, ComponentRef, ElementRef, OnInit, Type, ViewChild, ViewContainerRef } from '@angular/core';
 
 
 @Component({
     host: {
-        "[class.fixed]": "positionFixed",
-        "[style.left.px]": "left",
-        "[style.top.px]": "top"
+        '[class.fixed]': 'positionFixed'
     },
-    selector: "overlay",
-    template: "<ng-template #container></ng-template>",
+    selector: 'overlay',
+    template: '<ng-template #container></ng-template>',
     styles: [
             `
         :host {
           position: absolute;
           z-index: 100;
+          right: 0;
+          left: 0;
         }
 
         :host.fixed {
@@ -29,7 +29,7 @@ export class OverlayComponent implements OnInit {
     public left: number;
     public top: number;
 
-    @ViewChild("container", { read: ViewContainerRef })
+    @ViewChild('container', { read: ViewContainerRef })
     public container: ViewContainerRef;
 
     public constructor(private componentFactoryResolver: ComponentFactoryResolver,
