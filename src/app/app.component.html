@@ -1,11 +1,11 @@
-<div class="example">
-        <date-picker
-            [format]="'YYYY-MM-DD'"
-            [initialDate]="initDate"
-            (dateUpdated)="dateUpdated = $event"
-        ></date-picker>
-        <pre>Date-picker = {{ dateUpdated | json }}</pre>
-</div>
+    <date-picker
+        [format]="'YYYY-MM-DD'"
+        [initialDate]="initDate"
+        (dateUpdated)="dateUpdated = $event"
+    ></date-picker>
+
+<pre [ngStyle]="{'margin-top': '20em'}">Date-picker = {{ dateUpdated | json }}</pre>
+
 <!-- <div class="example">
     <form #form2="ngForm">
         <date-picker mode="datetime" ngModel name="date"></date-picker>

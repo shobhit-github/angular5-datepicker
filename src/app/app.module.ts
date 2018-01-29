@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import { OverlayModule } from '../overlay';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {DatePickerModule} from '../datepicker/';
+import {DatePickerModule, OverlayModule} from '../../@date-picker-module';
 
 import { AppComponent } from './app.component';
 
