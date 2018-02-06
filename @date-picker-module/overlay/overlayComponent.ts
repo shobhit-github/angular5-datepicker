@@ -10,7 +10,7 @@ import { Component, ComponentFactoryResolver, ComponentRef, ElementRef, OnInit, 
     styles: [
             `
         :host {
-          position: absolute;
+          /*position: absolute;*/
           z-index: 100;
           right: 0;
           left: 0;

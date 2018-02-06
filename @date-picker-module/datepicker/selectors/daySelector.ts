@@ -52,7 +52,7 @@ import {AbstractSelector} from './abstractSelector';
       cursor: pointer;
       flex-grow: 1;
       flex-shrink: 0;
-      flex-basis: 12%;
+      width: 13%;
       background: #eee;
       border: 1px solid white;
       padding: 0;

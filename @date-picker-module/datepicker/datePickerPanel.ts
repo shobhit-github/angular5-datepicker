@@ -24,20 +24,20 @@ import {ControlValueAccessorProviderFactory, local} from './common';
     .datepicker-panel {
       display: flex;
       overflow: hidden;
-      max-width: 17em;
+      /*max-width: 17em;*/
       margin-top: 0;
       padding: 0;
       border: 1px solid #ccc;
       background: #fff;
       flex-flow: column nowrap;
       justify-content: center;
-      align-items: center
+      /*align-items: center;*/
     }
 
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
       .datepicker-panel {
         margin: 0 auto;
-        width: 90%;
+        /*width: 100%;*/
       }
     }
   `]
@@ -88,7 +88,6 @@ export class DatePickerPanel implements ControlValueAccessor {
     if (!parsedValue.isValid()) {
       parsedValue = local();
     }
-
     this.updateControls(parsedValue);
   }
 
