@@ -77,7 +77,7 @@ import {AbstractSelector} from './abstractSelector';
           {{dow}}
         </li>
       </ul>
-      <ul class="day-selector__days-of-month">
+      <ul adjustSize class="day-selector__days-of-month">
         <li *ngFor="let date of calendar()"
             [ngClass]="{ selected: isSelected(date), 'current-month': isCurrentMonth(date), 'out-of-month': !isCurrentMonth(date), 'day-selector__day-of-month': true }"
             (mousedown)="dateSelected.emit(date); $event.preventDefault(); $event.stopPropagation();">
@@ -94,9 +94,9 @@ export class DaySelector extends AbstractSelector {
     @Output() public dateSelected: EventEmitter<Moment>;
     @Output() public modeChanged: EventEmitter<any>;
 
-    public getDaysOfWeek(): string[] {
+    public getDaysOfWeek = (): string[] => {
       return daysOfWeek();
-    }
+    };
 
     public calendar(): Moment[] {
       return monthCalendar(this.value);

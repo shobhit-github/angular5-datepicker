@@ -6,13 +6,15 @@ import {OverlayModule} from '../overlay';
 
 import {DaySelector, DecadeSelector, HourSelector, MinuteSelector, MonthSelector, PeriodSwitch, TimeComponentScroller, TimeComponentSelector, YearSelector} from './selectors';
 import {DatePicker, DatePickerPanel, DateSelectorComponent, TimeSelector} from './index';
+import {SharedModule} from './_shared/shared.module';
 
 
 @NgModule({
   imports: [
     CommonModule,
     OverlayModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   declarations: [
     PeriodSwitch,
